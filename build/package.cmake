@@ -62,10 +62,10 @@ if (WITH_PACKAGE_SH
     list(APPEND PACKAGE_LIST "DEB package (.deb)")
     set(CPACK_DEBIAN_PACKAGE_SECTION "net")
     set(CPACK_DEBIAN_PACKAGE_NAME "centreon-broker")
-    configure_file("${SCRIPT_DIR}/deb/postinst.in" "${SCRIPT_DIR}/deb/postinst")
+    configure_file("${SCRIPT_DIR}/debian/postinst.in" "${SCRIPT_DIR}/debian/postinst")
     set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA
-      "${SCRIPT_DIR}/deb/postinst"
-      "${SCRIPT_DIR}/deb/prerm")
+      "${SCRIPT_DIR}/debian/postinst"
+      "${SCRIPT_DIR}/debian/prerm")
   endif ()
   if (WITH_PACKAGE_RPM)
     list(APPEND CPACK_GENERATOR "RPM")
